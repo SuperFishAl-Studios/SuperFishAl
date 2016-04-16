@@ -238,56 +238,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &751194311
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 411536, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 425782, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &756099718
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +910,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1553316344}
-  m_LocalRotation: {x: -0.13052621, y: 0, z: 0, w: 0.9914449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -979,7 +929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1727521493}
   damping: 1
-  lookAheadFactor: 3
+  lookAheadFactor: 7
   lookAheadReturnSpeed: 0.5
   lookAheadMoveThreshold: 0.1
 --- !u!1 &1585818605 stripped
@@ -1009,7 +959,7 @@ GameObject:
   - 212: {fileID: 1727521492}
   - 114: {fileID: 1727521490}
   - 50: {fileID: 1727521491}
-  - 61: {fileID: 1727521494}
+  - 58: {fileID: 1727521494}
   - 95: {fileID: 1727521495}
   m_Layer: 0
   m_Name: Player
@@ -1078,7 +1028,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dfe95d5cae34e1844a922fcb56461057, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e69e886241b14017b0d8f52dcee5b03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1090,12 +1040,12 @@ Transform:
   m_GameObject: {fileID: 1727521489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!61 &1727521494
-BoxCollider2D:
+--- !u!58 &1727521494
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1105,9 +1055,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.8}
   serializedVersion: 2
-  m_Size: {x: 2.3599997, y: 1.2899998}
+  m_Radius: 1.4998372
 --- !u!95 &1727521495
 Animator:
   serializedVersion: 3
