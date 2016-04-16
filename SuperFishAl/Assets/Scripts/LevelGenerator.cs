@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 public class LevelGenerator : MonoBehaviour
 {
-    private int numberOfObjects;
-    private List<object> objects;
+    public GameObject[] objects;
 
     // Use this for initialization
     void Start()
     {
-        numberOfObjects = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Random.value > .95)
+        {
+            Instantiate(this.objects[Random.Range(0, this.objects.GetLength(0))], new Vector3(transform.position.x + Random.Range(-10, 10), transform.position.y, 0), Quaternion.identity);
+        }
     }
 }
