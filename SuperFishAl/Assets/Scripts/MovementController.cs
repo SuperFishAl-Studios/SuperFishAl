@@ -32,11 +32,15 @@ public class MovementController : MonoBehaviour
         {
             direction += Vector2.right;
         }
-        if (Input.GetKey(this.UpKey) && (velocity.y < this.MaxSpeed))
+        if (Input.GetKey(this.UpKey) && (velocity.y < this.MaxSpeed * 2))
         {
             direction += Vector2.up;
         }
-        if (Input.GetKey(this.DownKey) && (velocity.y > (-1 * this.MaxSpeed)))
+        if (velocity.y < this.MaxSpeed)
+        {
+            direction += Vector2.up / 2;
+        }
+        if (Input.GetKey(this.DownKey) && (velocity.y > this.MaxSpeed))
         {
             direction += Vector2.down;
         }
