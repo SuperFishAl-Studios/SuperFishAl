@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\DestroyerScript.cs" />
      <Compile Include="Assets\Scripts\EatEnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyCollisionDamageComponent.cs" />
+     <Compile Include="Assets\Scripts\EscapeController.cs" />
      <Compile Include="Assets\Scripts\FadeScript.cs" />
      <Compile Include="Assets\Scripts\HealthComponent.cs" />
      <Compile Include="Assets\Scripts\JumpController.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\LockToY.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MovementController.cs" />
+     <Compile Include="Assets\Scripts\TankMovementController.cs" />
      <Compile Include="Assets\Scripts\TransformController.cs" />
      <Compile Include="Assets\Scripts\YouDiedScript.cs" />
  <Reference Include="UnityEngine.UI">

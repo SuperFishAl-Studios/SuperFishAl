@@ -23,7 +23,6 @@ public class EatEnemyController : MonoBehaviour
     {
         if (Input.GetKey(this.EatKey) && !eating)
         {
-            Debug.Log("nom");
             animator.SetBool("Chomp", true);
             eating = true;
             canEat = false;
@@ -38,13 +37,10 @@ public class EatEnemyController : MonoBehaviour
             var thingToEat = collision.gameObject;
             if (thingToEat.tag == "Enemy")
             {
-                Debug.Log("CHOMP");
-
                 // Play the enemy's RIP audio if it has one
                 var audioSource = thingToEat.GetComponent<AudioSource>();
                 if (audioSource)
                 {
-                    Debug.Log("rip enemy");
                     audioSource.Play();
                 }
                 Destroy(thingToEat);

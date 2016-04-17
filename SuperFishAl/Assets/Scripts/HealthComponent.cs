@@ -1,14 +1,15 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthComponent : MonoBehaviour {
 
-    public double CurrentHealth;
-    public double StartingHealth = 5;
-    public double MaxHealth = 5;
-    public double MinHealth = 0;
+    public float CurrentHealth;
+    public float StartingHealth = 5;
+    public float MaxHealth = 5;
+    public float MinHealth = 0;
 
     public AudioClip smallDamageSound;
     public AudioClip largeDamageSound;
@@ -18,13 +19,28 @@ public class HealthComponent : MonoBehaviour {
     private bool IsDead;
     private bool IsDamaged;
 
+    private Slider healthSlider;
+    private Image healthSliderFillImage;
+    private float healthFillFlashSpeed = .5f;
+    private Color originalHealthBarColor;
+
+    float duration = 5; // This will be your time in seconds.
+    float smoothness = 0.02f; // This will determine the smoothness of the lerp. Smaller values are smoother. Really it's the time between updates.
+
 	// Use this for initialization
 	void Start () {
         CurrentHealth = StartingHealth;
+        
+	    healthSlider = GameObject.FindGameObjectWithTag("Health").GetComponent<Slider>();
+	    healthSliderFillImage = GameObject.FindGameObjectWithTag("HealthFill").GetComponent<Image>();
+        originalHealthBarColor = healthSliderFillImage.color;
+
+        UpdateHealthBar();
+	    
         Debug.Log("Starting Health: " + CurrentHealth);
 	}
 
-    public void IncreaseHealth(double amount)
+    public void IncreaseHealth(float amount)
     {
         var updatedHealth = CurrentHealth + amount;
 
@@ -36,9 +52,10 @@ public class HealthComponent : MonoBehaviour {
         {
             CurrentHealth = updatedHealth;
         }
+        UpdateHealthBar();
     }
 
-    public void DecreaseHealth(double amount)
+    public void DecreaseHealth(float amount)
     {
         this.IsDamaged = true;
         var updatedHealth = CurrentHealth - amount;
@@ -52,6 +69,8 @@ public class HealthComponent : MonoBehaviour {
         {
             CurrentHealth = updatedHealth;
         }
+        FlashHealthBarForDamage();
+        UpdateHealthBar();
         Debug.Log("OUCH! Health: " + CurrentHealth);
 
         if (amount > largeDamageThreshold)
@@ -67,6 +86,7 @@ public class HealthComponent : MonoBehaviour {
     public void ResetHealth()
     {
         CurrentHealth = MaxHealth;
+        UpdateHealthBar();
     }
 
     public void KillThePlayer()
@@ -87,6 +107,35 @@ public class HealthComponent : MonoBehaviour {
         var waitTime = GetComponent<FadeScript>().BeginFade(1);
         yield return new WaitForSeconds(waitTime);
         SceneManager.LoadScene("DeathScreen");
+    }
+
+    void FlashHealthBarForDamage()
+    {
+        // TODO: gradient colors?!
+        var health = (int) CurrentHealth;
+        if (health == 4)
+        {
+            healthSliderFillImage.color = Color.yellow;
+        }else if (health == 3)
+        {
+            healthSliderFillImage.color = Color.yellow;
+        } else if (health == 2)
+        {
+            healthSliderFillImage.color = Color.red;
+        }else if (health == 1)
+        {
+            healthSliderFillImage.color = Color.red;
+        }
+        else
+        {
+            healthSliderFillImage.color = originalHealthBarColor;
+        }
+           
+    }
+
+    void UpdateHealthBar()
+    {
+        healthSlider.value = CurrentHealth;
     }
 
 }
