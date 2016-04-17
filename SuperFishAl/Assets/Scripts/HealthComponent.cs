@@ -79,6 +79,13 @@ public class HealthComponent : MonoBehaviour {
 
         // TODO: death animation here or something
 
+        StartCoroutine(EndLevel());
+    }
+
+    IEnumerator EndLevel()
+    {
+        var waitTime = GetComponent<FadeScript>().BeginFade(1);
+        yield return new WaitForSeconds(waitTime);
         SceneManager.LoadScene("DeathScreen");
     }
 

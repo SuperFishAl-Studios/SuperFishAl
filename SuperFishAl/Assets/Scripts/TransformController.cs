@@ -5,6 +5,8 @@ public class TransformController : MonoBehaviour
     public GameObject[] transformations;
     public GameObject target;
 
+    private int currentTransformationIndex;
+
     // Use this for initialization
     void Start()
     {
@@ -14,25 +16,30 @@ public class TransformController : MonoBehaviour
     void Update()
     {
         GameObject newTarget = null;
-        if (Input.GetKey(KeyCode.Alpha1) && transformations.Length > 0)
+        if (Input.GetKey(KeyCode.Alpha1) && transformations.Length > 0 && currentTransformationIndex != 0)
         {
-            newTarget = transformations[0];
+            currentTransformationIndex = 0;
+            newTarget = transformations[currentTransformationIndex];
         }
-        else if (Input.GetKey(KeyCode.Alpha2) && transformations.Length > 1)
+        else if (Input.GetKey(KeyCode.Alpha2) && transformations.Length > 1 && currentTransformationIndex != 1)
         {
-            newTarget = transformations[1];
+            currentTransformationIndex = 1;
+            newTarget = transformations[currentTransformationIndex];
         }
-        else if (Input.GetKey(KeyCode.Alpha3) && transformations.Length > 2)
+        else if (Input.GetKey(KeyCode.Alpha3) && transformations.Length > 2 && currentTransformationIndex != 2)
         {
-            newTarget = transformations[2];
+            currentTransformationIndex = 2;
+            newTarget = transformations[currentTransformationIndex];
         }
-        else if (Input.GetKey(KeyCode.Alpha4) && transformations.Length > 3)
+        else if (Input.GetKey(KeyCode.Alpha4) && transformations.Length > 3 && currentTransformationIndex != 3)
         {
-            newTarget = transformations[3];
+            currentTransformationIndex = 3;
+            newTarget = transformations[currentTransformationIndex];
         }
-        else if (Input.GetKey(KeyCode.Alpha5) && transformations.Length > 4)
+        else if (Input.GetKey(KeyCode.Alpha5) && transformations.Length > 4 && currentTransformationIndex != 4)
         {
-            newTarget = transformations[4];
+            currentTransformationIndex = 4;
+            newTarget = transformations[currentTransformationIndex];
         }
 
         if (newTarget != null)

@@ -271,6 +271,7 @@ MonoBehaviour:
   transformations:
   - {fileID: 186822, guid: ef2134dd63acca645b02eb0e6cce47ae, type: 2}
   - {fileID: 141930, guid: 8e2ab7d2c774a1749ac319ea227a3892, type: 2}
+  - {fileID: 118952, guid: 4db959f6fbdcbbd45ac4162a4a64022d, type: 2}
   target: {fileID: 1304449765}
 --- !u!81 &650633233
 AudioListener:
