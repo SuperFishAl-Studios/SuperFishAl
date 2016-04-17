@@ -20,11 +20,6 @@ public class MovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("StartScreen");
-        }
-
         var rigidBody = GetComponent<Rigidbody2D>();
         var velocity = rigidBody.velocity;
         Vector2 direction = new Vector2();

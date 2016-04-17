@@ -10,13 +10,13 @@ GameObject:
   - 4: {fileID: 499378}
   - 212: {fileID: 21277870}
   - 50: {fileID: 5009592}
-  - 114: {fileID: 11406782}
   - 114: {fileID: 11419316}
   - 60: {fileID: 6058364}
   - 82: {fileID: 8215238}
   - 96: {fileID: 9684104}
   - 198: {fileID: 19837920}
   - 199: {fileID: 19962348}
+  - 114: {fileID: 11458402}
   m_Layer: 0
   m_Name: Dolphin
   m_TagString: Untagged
@@ -343,23 +343,6 @@ TrailRenderer:
       rgba: 11227778
   m_MinVertexDistance: 0.1
   m_Autodestruct: 1
---- !u!114 &11406782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc96b3c8b2e60c48b2a499093706044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LeftKey: 97
-  RightKey: 100
-  UpKey: 119
-  DownKey: 115
-  Acceleration: 10
-  MaxSpeed: 30
 --- !u!114 &11419316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -372,6 +355,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpKey: 32
+--- !u!114 &11458402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5f6f635afa3114ba9a111e3c97901e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftKey: 97
+  RightKey: 100
+  ForwardKey: 119
+  SlowKey: 115
+  Acceleration: 20
+  MaxSpeed: 30
 --- !u!198 &19837920
 ParticleSystem:
   m_ObjectHideFlags: 1
