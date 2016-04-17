@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\ButtonClickSoundScript.cs" />
      <Compile Include="Assets\Scripts\ButtonEnterSoundScript.cs" />
      <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
+     <Compile Include="Assets\Scripts\ChasePlayerScript.cs" />
      <Compile Include="Assets\Scripts\DestroyerScript.cs" />
      <Compile Include="Assets\Scripts\EatEnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyCollisionDamageComponent.cs" />
