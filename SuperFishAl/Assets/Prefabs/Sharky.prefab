@@ -13,6 +13,7 @@ GameObject:
   - 61: {fileID: 6177832}
   - 114: {fileID: 11498154}
   - 82: {fileID: 8266544}
+  - 114: {fileID: 11429888}
   m_Layer: 0
   m_Name: Sharky
   m_TagString: Untagged
@@ -72,7 +73,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d785a5560534ab443ae4720b8830a084, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 87ec4c1421bc570418060dffe2286ae4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -137,6 +138,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &11429888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4712de4992813654284e39cb73991afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EatKey: 32
 --- !u!114 &11498154
 MonoBehaviour:
   m_ObjectHideFlags: 1
