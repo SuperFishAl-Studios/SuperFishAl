@@ -10,6 +10,11 @@ public class HealthComponent : MonoBehaviour {
     public double MaxHealth = 5;
     public double MinHealth = 0;
 
+    public AudioClip smallDamageSound;
+    public AudioClip largeDamageSound;
+    public float largeDamageThreshold = 1.0f; // Above this value is large damage
+    public AudioSource audioSource;
+
     private bool IsDead;
     private bool IsDamaged;
 
@@ -18,11 +23,6 @@ public class HealthComponent : MonoBehaviour {
         CurrentHealth = StartingHealth;
         Debug.Log("Starting Health: " + CurrentHealth);
 	}
-	
-	// Update is called once per frame
-    void Update () {
-	    // TODO: any damaged sounds/animations here
-    }
 
     public void IncreaseHealth(double amount)
     {
@@ -53,6 +53,15 @@ public class HealthComponent : MonoBehaviour {
             CurrentHealth = updatedHealth;
         }
         Debug.Log("OUCH! Health: " + CurrentHealth);
+
+        if (amount > largeDamageThreshold)
+        {
+            audioSource.PlayOneShot(largeDamageSound);
+        }
+        else
+        {
+            audioSource.PlayOneShot(smallDamageSound);
+        }
     }
 
     public void ResetHealth()
