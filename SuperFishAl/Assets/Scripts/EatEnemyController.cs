@@ -4,16 +4,20 @@ public class EatEnemyController : MonoBehaviour
 {
 
     public KeyCode EatKey = KeyCode.Space;
+    public float EatHealthRegen = .5f;
 
     private bool eating;
     private bool canEat;
 
     private Animator animator;
+    private HealthComponent playerHealth;
 
     // Use this for initialization
     void Start()
     {
         this.animator = this.GetComponent<Animator>();
+        var player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<HealthComponent>();
         canEat = true;
         eating = false;
     }
@@ -44,6 +48,7 @@ public class EatEnemyController : MonoBehaviour
                     audioSource.Play();
                 }
                 Destroy(thingToEat);
+                playerHealth.IncreaseHealth(EatHealthRegen);
             }
         }
     }
