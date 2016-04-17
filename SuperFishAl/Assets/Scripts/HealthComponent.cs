@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HealthComponent : MonoBehaviour {
 
@@ -65,6 +66,11 @@ public class HealthComponent : MonoBehaviour {
         IsDead = true;
         var playerFish = gameObject.GetComponentsInChildren<Transform>().Last().gameObject;
         Destroy(playerFish);
+
+
+        // TODO: death animation here or something
+
+        SceneManager.LoadScene("DeathScreen");
     }
 
 }

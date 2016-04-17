@@ -5,7 +5,7 @@ using System.Collections;
 public class EnemyCollisionDamageComponent : MonoBehaviour
 {
     public double damageAmount = 0.5;
-    public float timeBetweenAttacks = 0.2f;
+    public float timeBetweenAttacks = 0.5f;
 
     private HealthComponent playerHealth;
     private GameObject playerFish;
