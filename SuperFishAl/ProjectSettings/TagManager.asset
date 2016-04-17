@@ -9,6 +9,7 @@ TagManager:
   - HUD
   - Health
   - HealthFill
+  - Boss
   - Destructable
   - Score
   layers:
