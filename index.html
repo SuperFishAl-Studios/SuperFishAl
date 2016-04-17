@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>SuperFishAl by SuperFishAl-Studios</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script src="WebGL/TemplateData/UnityProgress.js"></script>
-    <link rel="stylesheet" href="WebGL/TemplateData/style.css">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">SuperFishAl</h1>
-      <h2 class="project-tagline">Ludum Dare #35 - Shapeshift</h2>
-      <a href="https://github.com/SuperFishAl-Studios/SuperFishAl" class="btn">View on GitHub</a>
-      <a href="https://github.com/SuperFishAl-Studios/SuperFishAl/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/SuperFishAl-Studios/SuperFishAl/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
 
-    <section class="main-content">
-        <p class="header"><span>Unity WebGL Player | </span>SuperFishAl</p>
+<head>
+  <meta charset="UTF-8">
+  <title>SuperFishAl by SuperFishAl-Studios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  <script src="WebGL/TemplateData/UnityProgress.js"></script>
+  <link rel="stylesheet" href="WebGL/TemplateData/style.css">
+  <style>
+    .template-wrap {
+      position: absolute;
+      top: auto;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="page-header">
+    <h1 class="project-name">SuperFishAl</h1>
+    <h2 class="project-tagline">Ludum Dare #35 - Shapeshift</h2>
+    <a href="https://github.com/SuperFishAl-Studios/SuperFishAl" class="btn">View on GitHub</a>
+    <a href="https://github.com/SuperFishAl-Studios/SuperFishAl/zipball/master" class="btn">Download .zip</a>
+    <a href="https://github.com/SuperFishAl-Studios/SuperFishAl/tarball/master" class="btn">Download .tar.gz</a>
+  </section>
+  <section class="main-content">
+    <p class="header"><span>Unity WebGL Player | </span>SuperFishAl</p>
     <div class="template-wrap clear">
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
       <br>
       <div class="logo"></div>
-      <div class="fullscreen"><img src="WebGL/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+      <div class="fullscreen"><img src="WebGL/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);"
+        /></div>
       <div class="title">SuperFishAl</div>
     </div>
     <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
-  var Module = {
-    TOTAL_MEMORY: 268435456,
-    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
-    dataUrl: "WebGL/Release/WebGL.data",
-    codeUrl: "WebGL/Release/WebGL.js",
-    memUrl: "WebGL/Release/WebGL.mem",
-  };
-</script>
-<script src="WebGL/Release/UnityLoader.js"></script>
+      var Module = {
+        TOTAL_MEMORY: 268435456,
+        errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+        compatibilitycheck: null,
+        dataUrl: "WebGL/Release/WebGL.data",
+        codeUrl: "WebGL/Release/WebGL.js",
+        memUrl: "WebGL/Release/WebGL.mem",
+      };
+    </script>
+    <script src="WebGL/Release/UnityLoader.js"></script>
+</body>
 
-  
-  </body>
 </html>
