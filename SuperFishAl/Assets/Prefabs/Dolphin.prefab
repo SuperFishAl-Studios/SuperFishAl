@@ -17,6 +17,7 @@ GameObject:
   - 199: {fileID: 19962348}
   - 114: {fileID: 11458402}
   - 60: {fileID: 6021594}
+  - 95: {fileID: 9542594}
   m_Layer: 0
   m_Name: Dolphin
   m_TagString: Untagged
@@ -260,6 +261,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &9542594
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141930}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 737c36f4553496945b3909c826e19a49, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!96 &9684104
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -270,7 +288,7 @@ TrailRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 2100000, guid: 844c782886177944b90cce80105e317a, type: 2}
+  - {fileID: 2100000, guid: c9475822a9a237245aed24510263ae63, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1902,7 +1920,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d21257d48c086ba429c697ec32d5ce36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9100f05a4a0cac40bbac76e38e782dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -7,9 +7,12 @@ public class JumpController : MonoBehaviour
     private bool jumping;
     private bool canJump;
 
+    private Animator animator;
+
     // Use this for initialization
     void Start()
     {
+        this.animator = this.GetComponent<Animator>();
         canJump = true;
         jumping = false;
     }
@@ -17,8 +20,9 @@ public class JumpController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(this.JumpKey) && !jumping)
+        if (Input.GetKey(this.JumpKey) && !jumping && canJump)
         {
+            animator.SetBool("Jump", true);
             jumping = true;
             canJump = false;
             Invoke("EndJump", 1);
@@ -41,6 +45,7 @@ public class JumpController : MonoBehaviour
 
     void EndJump()
     {
+        animator.SetBool("Jump", false);
         jumping = false;
         canJump = false;
         Invoke("EndCooldown", 1);
