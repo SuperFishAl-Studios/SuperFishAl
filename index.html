@@ -9,8 +9,8 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  <script src="WebGL/TemplateData/UnityProgress.js"></script>
-  <link rel="stylesheet" href="WebGL/TemplateData/style.css">
+  <script src="TemplateData/UnityProgress.js"></script>
+  <link rel="stylesheet" href="TemplateData/style.css">
   <style>
     .template-wrap {
       position: absolute;
@@ -36,7 +36,7 @@
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
       <br>
       <div class="logo"></div>
-      <div class="fullscreen"><img src="WebGL/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);"
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);"
         /></div>
       <div class="title">SuperFishAl</div>
     </div>
@@ -46,12 +46,12 @@
         TOTAL_MEMORY: 268435456,
         errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
         compatibilitycheck: null,
-        dataUrl: "WebGL/Release/WebGL.data",
-        codeUrl: "WebGL/Release/WebGL.js",
-        memUrl: "WebGL/Release/WebGL.mem",
+        dataUrl: "Release/WebGL.data",
+        codeUrl: "Release/WebGL.js",
+        memUrl: "Release/WebGL.mem",
       };
     </script>
-    <script src="WebGL/Release/UnityLoader.js"></script>
+    <script src="Release/UnityLoader.js"></script>
 </body>
 
 </html>
