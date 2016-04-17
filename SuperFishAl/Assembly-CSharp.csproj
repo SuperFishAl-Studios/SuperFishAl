@@ -45,9 +45,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ButtonClickSoundScript.cs" />
+     <Compile Include="Assets\Scripts\ButtonEnterSoundScript.cs" />
      <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Scripts\DestroyerScript.cs" />
      <Compile Include="Assets\Scripts\EnemyCollisionDamageComponent.cs" />
+     <Compile Include="Assets\Scripts\FadeScript.cs" />
      <Compile Include="Assets\Scripts\HealthComponent.cs" />
      <Compile Include="Assets\Scripts\JumpController.cs" />
      <Compile Include="Assets\Scripts\LevelGenerator.cs" />
