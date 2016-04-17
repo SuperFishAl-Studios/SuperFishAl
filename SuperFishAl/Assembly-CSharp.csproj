@@ -60,6 +60,8 @@
      <Compile Include="Assets\Scripts\LockToY.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MovementController.cs" />
+     <Compile Include="Assets\Scripts\ScoreController.cs" />
+     <Compile Include="Assets\Scripts\SmashController.cs" />
      <Compile Include="Assets\Scripts\TankMovementController.cs" />
      <Compile Include="Assets\Scripts\TransformController.cs" />
      <Compile Include="Assets\Scripts\YouDiedScript.cs" />
