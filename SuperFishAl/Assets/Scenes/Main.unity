@@ -873,6 +873,7 @@ MonoBehaviour:
   - {fileID: 1585818605}
   - {fileID: 1673251874}
   - {fileID: 1907663303}
+  - {fileID: 133458, guid: c3a7a3124b79268498845389443e1347, type: 2}
   rate: 2
   width: 50
 --- !u!1001 &1445496509
