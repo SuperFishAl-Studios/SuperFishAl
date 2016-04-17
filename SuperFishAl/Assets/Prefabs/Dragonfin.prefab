@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5050142}
   - 95: {fileID: 9546676}
   - 58: {fileID: 5858782}
+  - 114: {fileID: 11447688}
   m_Layer: 0
   m_Name: Dragonfin
   m_TagString: Untagged
@@ -79,6 +80,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11447688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8906315015fe749a9e5713d513e7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  timeBetweenAttacks: 0.2
 --- !u!212 &21208932
 SpriteRenderer:
   m_ObjectHideFlags: 1
