@@ -35,7 +35,7 @@ public class JumpController : MonoBehaviour
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {
-                if (contact.otherCollider.tag != "Background")
+                if (contact.otherCollider.tag != "Background" && contact.collider.tag != "Background")
                 {
                     Physics2D.IgnoreCollision(contact.otherCollider, contact.collider);
                 }
@@ -48,7 +48,7 @@ public class JumpController : MonoBehaviour
         animator.SetBool("Jump", false);
         jumping = false;
         canJump = false;
-        Invoke("EndCooldown", 1);
+        Invoke("EndCooldown", 0.25f);
     }
 
     void EndCooldown()
