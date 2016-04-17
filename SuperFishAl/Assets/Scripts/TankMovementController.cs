@@ -49,6 +49,5 @@ public class TankMovementController : MonoBehaviour
         {
             rigidBody.velocity = rigidBody.velocity / 2;
         }
-
     }
 }
