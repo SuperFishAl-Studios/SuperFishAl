@@ -10,6 +10,7 @@ TagManager:
   - Health
   - HealthFill
   - Destructable
+  - Score
   layers:
   - Default
   - TransparentFX
