@@ -22,15 +22,15 @@ public class TransformController : MonoBehaviour
         {
             newTarget = transformations[1];
         }
-        else if (Input.GetKey(KeyCode.Alpha2) && transformations.Length > 2)
+        else if (Input.GetKey(KeyCode.Alpha3) && transformations.Length > 2)
         {
             newTarget = transformations[2];
         }
-        else if (Input.GetKey(KeyCode.Alpha2) && transformations.Length > 3)
+        else if (Input.GetKey(KeyCode.Alpha4) && transformations.Length > 3)
         {
             newTarget = transformations[3];
         }
-        else if (Input.GetKey(KeyCode.Alpha2) && transformations.Length > 4)
+        else if (Input.GetKey(KeyCode.Alpha5) && transformations.Length > 4)
         {
             newTarget = transformations[4];
         }
@@ -39,6 +39,8 @@ public class TransformController : MonoBehaviour
         {
             var createdTarget = Instantiate(newTarget, target.transform.position, Quaternion.identity) as GameObject;
             createdTarget.transform.parent = target.transform.parent;
+
+            // RIP
             Destroy(target);
             target = createdTarget;
         }
