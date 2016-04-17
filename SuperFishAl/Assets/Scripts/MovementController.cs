@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovementController : MonoBehaviour
 {
@@ -23,12 +24,7 @@ public class MovementController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-
-            Application.Quit();
-#endif
+            SceneManager.LoadScene("StartScreen");
         }
 
         var rigidBody = GetComponent<Rigidbody2D>();
