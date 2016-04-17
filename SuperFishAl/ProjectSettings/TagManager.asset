@@ -9,6 +9,7 @@ TagManager:
   - HUD
   - Health
   - HealthFill
+  - Destructable
   layers:
   - Default
   - TransparentFX

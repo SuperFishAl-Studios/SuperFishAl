@@ -144,6 +144,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
+      propertyPath: m_TagString
+      value: Destructable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
   m_IsPrefabParent: 0
@@ -692,6 +696,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
+      propertyPath: m_TagString
+      value: Destructable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
   m_IsPrefabParent: 0
@@ -1129,6 +1137,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
+      propertyPath: m_TagString
+      value: Destructable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
   m_IsPrefabParent: 0
@@ -1235,6 +1247,10 @@ Prefab:
     - target: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
       propertyPath: m_Name
       value: Rock (md1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
@@ -1418,6 +1434,10 @@ Prefab:
     - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
+      propertyPath: m_TagString
+      value: Destructable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
@@ -2007,6 +2027,10 @@ Prefab:
     - target: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
