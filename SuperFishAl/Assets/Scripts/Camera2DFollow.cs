@@ -1,4 +1,4 @@
-using System;
+using System.Linq;
 using UnityEngine;
 
 namespace UnityStandardAssets._2D
@@ -19,8 +19,9 @@ namespace UnityStandardAssets._2D
         // Use this for initialization
         private void Start()
         {
-            m_LastTargetPosition = target.position;
-            m_OffsetZ = (transform.position - target.position).z;
+            var childTransform = target.GetComponentsInChildren<Transform>().Last();
+            m_LastTargetPosition = childTransform.position;
+            m_OffsetZ = (transform.position - childTransform.position).z;
             transform.parent = null;
         }
 
@@ -28,8 +29,9 @@ namespace UnityStandardAssets._2D
         // Update is called once per frame
         private void Update()
         {
+            var childTransform = target.GetComponentsInChildren<Transform>().Last();
             // only update lookahead pos if accelerating or changed direction
-            float yMoveDelta = (target.position - m_LastTargetPosition).y;
+            float yMoveDelta = (childTransform.position - m_LastTargetPosition).y;
 
             bool updateLookAheadTarget = Mathf.Abs(yMoveDelta) > lookAheadMoveThreshold;
 
@@ -42,12 +44,12 @@ namespace UnityStandardAssets._2D
                 m_LookAheadPos = Vector3.MoveTowards(m_LookAheadPos, Vector3.zero, Time.deltaTime * lookAheadReturnSpeed);
             }
 
-            Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward * m_OffsetZ;
+            Vector3 aheadTargetPos = childTransform.position + m_LookAheadPos + Vector3.forward * m_OffsetZ;
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
 
             transform.position = newPos;
 
-            m_LastTargetPosition = target.position;
+            m_LastTargetPosition = childTransform.position;
         }
     }
 }

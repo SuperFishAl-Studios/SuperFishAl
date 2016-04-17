@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class LockToY : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class LockToY : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, target.transform.position.y, transform.position.z);
+        var childTransform = target.GetComponentsInChildren<Transform>().Last();
+        transform.position = new Vector3(transform.position.x, childTransform.transform.position.y, transform.position.z);
     }
 }
