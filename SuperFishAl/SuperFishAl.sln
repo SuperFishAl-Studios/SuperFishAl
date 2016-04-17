@@ -1,7 +1,15 @@
+<<<<<<< Updated upstream
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFishAl.CSharp", "SuperFishAl.CSharp.csproj", "{7EC112D1-DAB6-4211-C9C1-E249FBEE5685}"
+=======
+<<<<<<< Updated upstream
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{486C8182-7EA9-7F77-E04B-6693C036BF65}") = "SuperFishAl", "Assembly-CSharp.csproj", "{911DEE13-DEDE-1296-7AFB-C9B8D7548EEE}"
+>>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,3 +26,28 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
+=======
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{486C8182-7EA9-7F77-E04B-6693C036BF65}") = "SuperFishAl", "Assembly-CSharp.csproj", "{911DEE13-DEDE-1296-7AFB-C9B8D7548EEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{911DEE13-DEDE-1296-7AFB-C9B8D7548EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911DEE13-DEDE-1296-7AFB-C9B8D7548EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911DEE13-DEDE-1296-7AFB-C9B8D7548EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911DEE13-DEDE-1296-7AFB-C9B8D7548EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
+>>>>>>> Stashed changes
