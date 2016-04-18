@@ -30,6 +30,12 @@ public class WhirlpoolController : MonoBehaviour
         if (health != null)
         {
             health.DecreaseHealth(.01f);
+            Invoke("Release", 4f);
         }
+    }
+
+    void Release()
+    {
+        Destroy(gameObject);
     }
 }
