@@ -4,6 +4,8 @@ public class EatEnemyController : MonoBehaviour
 {
 
     public KeyCode EatKey = KeyCode.Space;
+    public AudioClip eatingSoundClip;
+    public AudioSource audioSource;
     public float EatHealthRegen = .5f;
 
     private bool eating;
@@ -28,6 +30,7 @@ public class EatEnemyController : MonoBehaviour
         if (Input.GetKey(this.EatKey) && !eating)
         {
             animator.SetBool("Chomp", true);
+            audioSource.PlayOneShot(eatingSoundClip, 0.3f);
             eating = true;
             canEat = false;
             Invoke("EndEat", 1);
