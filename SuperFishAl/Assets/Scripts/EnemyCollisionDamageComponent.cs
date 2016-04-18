@@ -7,6 +7,8 @@ public class EnemyCollisionDamageComponent : MonoBehaviour
     public float damageAmount = 0.5f;
     public float timeBetweenAttacks = 2f;
 
+    public Sprite collisionSprite;
+
     private HealthComponent playerHealth;
     private GameObject playerFish;
 
@@ -14,12 +16,18 @@ public class EnemyCollisionDamageComponent : MonoBehaviour
 
     private float timer;
 
+    private SpriteRenderer spriteRenderer;
+    private Sprite originalsprite;
+
 	// Use this for initialization
 	void Start ()
 	{
 	    var player = GameObject.FindGameObjectWithTag("Player");
         playerFish = player.GetComponentsInChildren<Transform>().Last().gameObject;
         playerHealth = player.GetComponent<HealthComponent>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+	    originalsprite = spriteRenderer.sprite;
 	}
 	
 	// Update is called once per frame
@@ -54,10 +62,21 @@ public class EnemyCollisionDamageComponent : MonoBehaviour
     {
         timer = 0f;
 
+        if (collisionSprite != null)
+        {
+            spriteRenderer.sprite = collisionSprite;
+            Invoke("ResetSprite", .5f);
+        }
+
         if (playerHealth.CurrentHealth > playerHealth.MinHealth)
         {
             playerHealth.DecreaseHealth(damageAmount);
         }
 
+    }
+
+    void ResetSprite()
+    {
+        spriteRenderer.sprite = originalsprite;
     }
 }
