@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ChasePlayerScript : MonoBehaviour
 {
-    private int MoveSpeed = 4;
+    private int MoveSpeed = 20;
     private int MaxDist = 10;
     private int MinDist = 5;
     private Transform player;
@@ -18,14 +17,15 @@ public class ChasePlayerScript : MonoBehaviour
     {
         transform.LookAt(player);
 
-        if (Vector3.Distance(transform.position, player.position) >= MinDist)
-        {
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+        //if (Vector3.Distance(transform.position, player.position) >= MinDist)
+        //{
+        //    Debug.Log("i see u");
+        //    transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
-            if (Vector3.Distance(transform.position, player.position) <= MaxDist)
-            {
-                //Here Call any function U want Like Shoot at here or something
-            }
-        }
+        //    if (Vector3.Distance(transform.position, player.position) <= MaxDist)
+        //    {
+        //        //Here Call any function U want Like Shoot at here or something
+        //    }
+        //}
     }
 }

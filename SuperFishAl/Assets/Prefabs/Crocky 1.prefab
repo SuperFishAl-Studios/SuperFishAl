@@ -12,7 +12,6 @@ GameObject:
   - 50: {fileID: 5054998}
   - 61: {fileID: 6179920}
   - 114: {fileID: 11493076}
-  - 114: {fileID: 11435328}
   m_Layer: 0
   m_Name: Crocky 1
   m_TagString: Untagged
@@ -63,17 +62,6 @@ BoxCollider2D:
   m_Offset: {x: -0.032469332, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.0994779, y: 6.66}
---- !u!114 &11435328
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16118d5aa0a9aca4da3bc3c7dcf6cf8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11493076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,8 +73,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8906315015fe749a9e5713d513e7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 2
+  damageAmount: 2.5
   timeBetweenAttacks: 4
+  collisionSprite: {fileID: 21300000, guid: b1243a5622b3251438df330f8d89ecdd, type: 3}
 --- !u!212 &21208718
 SpriteRenderer:
   m_ObjectHideFlags: 1
