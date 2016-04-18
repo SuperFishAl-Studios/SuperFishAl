@@ -14,7 +14,7 @@ GameObject:
   - 58: {fileID: 5872410}
   m_Layer: 0
   m_Name: Whirlpoool
-  m_TagString: Untagged
+  m_TagString: Whirlpool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
