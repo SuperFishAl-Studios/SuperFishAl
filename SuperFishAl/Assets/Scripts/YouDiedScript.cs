@@ -1,8 +1,26 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class YouDiedScript : MonoBehaviour {
+public class YouDiedScript : MonoBehaviour
+{
+
+    private Text scoreLabel;
+    private Text highScoreLabel;
+
+    void Start()
+    {
+        scoreLabel = GameObject.Find("YourScoreValue").GetComponent<Text>();
+        highScoreLabel = GameObject.Find("TopScoreValue").GetComponent<Text>();
+
+        if (Score.CurrentScore > Score.HighScore)
+        {
+            Score.HighScore = Score.CurrentScore;
+        }
+
+        scoreLabel.text = Score.CurrentScore.ToString();
+        highScoreLabel.text = Score.HighScore.ToString();
+    }
 
     public void OnStartGame()
     {

@@ -27,6 +27,8 @@ public class HealthComponent : MonoBehaviour {
     float duration = 5; // This will be your time in seconds.
     float smoothness = 0.02f; // This will determine the smoothness of the lerp. Smaller values are smoother. Really it's the time between updates.
 
+    private Text score;
+
 	// Use this for initialization
 	void Start () {
         CurrentHealth = StartingHealth;
@@ -36,7 +38,10 @@ public class HealthComponent : MonoBehaviour {
         originalHealthBarColor = healthSliderFillImage.color;
 
         UpdateHealthBar();
-	    
+
+
+	    score = GameObject.FindGameObjectWithTag("Score").GetComponent<Text>();
+
         Debug.Log("Starting Health: " + CurrentHealth);
 	}
 
@@ -104,6 +109,7 @@ public class HealthComponent : MonoBehaviour {
 
     IEnumerator EndLevel()
     {
+        Score.CurrentScore = int.Parse(score.text);
         var waitTime = GetComponent<FadeScript>().BeginFade(1);
         yield return new WaitForSeconds(waitTime);
         SceneManager.LoadScene("DeathScreen");
@@ -128,7 +134,7 @@ public class HealthComponent : MonoBehaviour {
         }
         else
         {
-            healthSliderFillImage.color = originalHealthBarColor;
+            healthSliderFillImage.color = Color.red;
         }
            
     }
