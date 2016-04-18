@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\SmashController.cs" />
     <Compile Include="Assets\Scripts\TankMovementController.cs" />
     <Compile Include="Assets\Scripts\TransformController.cs" />
+    <Compile Include="Assets\Scripts\WhirlpoolController.cs" />
     <Compile Include="Assets\Scripts\YouDiedScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

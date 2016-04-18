@@ -978,10 +978,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1025176737}
---- !u!1 &1043969784 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-  m_PrefabInternal: {fileID: 374599165}
 --- !u!4 &1043969785 stripped
 Transform:
   m_PrefabParentObject: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
@@ -1471,11 +1467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 1043969784}
   - {fileID: 64921725}
   - {fileID: 1462802885}
   - {fileID: 1585818605}
-  - {fileID: 1673251874}
   - {fileID: 1907663303}
   - {fileID: 133458, guid: c3a7a3124b79268498845389443e1347, type: 2}
   - {fileID: 179598, guid: 640dd04ce0f243042a2d1836f35bd91f, type: 2}
@@ -1483,6 +1477,8 @@ MonoBehaviour:
   - {fileID: 171748, guid: bcd38eb7a90fcd041acdf1cb4661d434, type: 2}
   - {fileID: 184648, guid: bcf240ac60804464abe0f2286e826a84, type: 2}
   - {fileID: 134946, guid: 1800fcd47b0379848a1da64f76286721, type: 2}
+  - {fileID: 176246, guid: 01e22314a98493b4a95cbc5c03da48be, type: 2}
+  - {fileID: 112138, guid: d38982bce2f4538439e81cdff726458c, type: 2}
   rate: 0.5
   width: 50
 --- !u!114 &1405280428
@@ -1840,10 +1836,6 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
   m_PrefabInternal: {fileID: 1257619134}
---- !u!1 &1673251874 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 148696, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
-  m_PrefabInternal: {fileID: 1092400448}
 --- !u!4 &1673251875 stripped
 Transform:
   m_PrefabParentObject: {fileID: 407124, guid: 413615e92df6a8846833a8f2aac70f9d, type: 2}
